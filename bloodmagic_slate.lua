@@ -31,11 +31,9 @@ function getSlotLowestSlate()
         if(slotInfo ~= nil) then
             if (slotInfo.size < min ) then -- and slotInfo.name == "bloodmagic:slate" and slotInfo.size < amount and slotTier < slotInfo.damage ) then
                 if(slotInfo.name == "bloodmagic:slate") then
-                    print(slotInfo.name)
                     if(slotInfo.size < amount) then
-                        print(slotInfo.size)
-                        print(slotInfo.damage)
                         if(slateTier < slotInfo.damage) then
+                            print("debug size"..slotInfo.Size.." damage"..slotInfo.damage.." label"..slotInfo.label)
                             min = slotInfo.size
                             slot = i
                             slateTier = slotInfo.damage
