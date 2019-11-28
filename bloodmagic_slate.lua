@@ -1,5 +1,5 @@
 local s = require("sides")
-local tr = require("components").transposer
+local tr = require("component").transposer
 local bloodmagicAltar = s.west
 local drawerController = s.north
 local amount = 64
