@@ -29,10 +29,16 @@ function getSlotLowestSlate()
     for i=2,tr.getInventorySize(drawerController) do
         local slotInfo = tr.getStackInSlot(drawerController,i)
         if(slotInfo ~= nil) then
-            if (slotInfo.size < min  and slotInfo.name == "bloodmagic:slate" and slotInfo.size < amount and slotTier < slotInfo.damage ) then
-                min = slotInfo.size
-                slot = i
-                slateTier = slotInfo.damage
+            if (slotInfo.size < min )-- and slotInfo.name == "bloodmagic:slate" and slotInfo.size < amount and slotTier < slotInfo.damage ) then
+                if(slotInfo.name == "bloodmagic:slate") then
+                    if(slotInfo.size < amount) then
+                        if(slotTier < slotInfo.damage) then
+                            min = slotInfo.size
+                            slot = i
+                            slateTier = slotInfo.damage
+                        end
+                    end
+                end
             end
         end
     end
