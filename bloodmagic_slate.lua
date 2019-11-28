@@ -25,7 +25,7 @@ end
 function getSlotLowestSlate()
     min = 999
     slot = -1
-    slateTier = -1
+    slateTier = 99
     for i=2,tr.getInventorySize(drawerController) do
         local slotInfo = tr.getStackInSlot(drawerController,i)
         if(slotInfo ~= nil) then
