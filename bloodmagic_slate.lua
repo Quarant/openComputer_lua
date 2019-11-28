@@ -35,7 +35,7 @@ function getSlotLowestSlate()
                     print("debug size 2 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
                     if(slotInfo.size < amount) then
                         print("debug size 3 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
-                        if(slateTier < slotInfo.damage) then
+                        if( slotInfo.damage < slateTier) then
                             print("debug size 4"..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
                             min = slotInfo.size
                             slot = i
