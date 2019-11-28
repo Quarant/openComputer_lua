@@ -29,21 +29,21 @@ function getSlotLowestSlate()
     for i=2,tr.getInventorySize(drawerController) do
         local slotInfo = tr.getStackInSlot(drawerController,i)
         if(slotInfo ~= nil) then
-            if (slotInfo.size < min ) then -- and slotInfo.name == "bloodmagic:slate" and slotInfo.size < amount and slotTier < slotInfo.damage ) then
-                print("debug size 1 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
-                if(slotInfo.name == "bloodmagic:slate") then
-                    print("debug size 2 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
-                    if(slotInfo.size < amount) then
-                        print("debug size 3 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
-                        if( slotInfo.damage < slateTier) then
+            if (slotInfo.size < min  and slotInfo.name == "bloodmagic:slate" and slotInfo.size < amount and slotInfo.damage < slateTier  ) then
+                -- print("debug size 1 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
+                -- if(slotInfo.name == "bloodmagic:slate") then
+                --     print("debug size 2 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
+                --     if(slotInfo.size < amount) then
+                --         print("debug size 3 "..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
+                --         if( slotInfo.damage < slateTier) then
                             print("debug size 4"..slotInfo.size.." damage"..slotInfo.damage.." label"..slotInfo.label)
                             min = slotInfo.size
                             slot = i
                             slateTier = slotInfo.damage
-                        end
-                    end
-                end
-            end
+        --                 end
+        --             end
+        --         end
+        --     end
         end
     end
     return slot
